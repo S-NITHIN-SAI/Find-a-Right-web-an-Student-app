@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - Find a Right Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="netflix-bg">
+  <!-- Navbar -->
+  <header class="main-header">
+    <div class="navbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="courses.html" class="nav-btn">Courses</a>
+        <a href="career.html" class="nav-btn">Career</a>
+        <a href="about.html" class="nav-btn">About</a>
+        <a href="profile.html" class="nav-btn active">Profile</a>
+      </nav>
+      <div class="app-logo-index">Find a Right Web</div>
+      <button id="logoutBtn" class="logout-btn" aria-label="Logout">Logout</button>
+    </div>
+  </header>
+  
+  <main class="container my-4">
+    <section class="profile-section">
+      <h2>My Profile</h2>
+      <img src="https://via.placeholder.com/100?text=User" alt="User Profile Picture" class="profile-pic" loading="lazy">
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> john.doe@example.com</p>
+      <div class="progress-container">
+        <label for="progressBar">Course Progress:</label>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar" style="width: 40%;">40%</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="favorites-section">
+      <h2>My Favorites</h2>
+      <div id="favoritesGrid" class="grid"></div>
+      <div id="favEmptyState" class="empty-state">No favorites added.</div>
+    </section>
+  </main>
+  
+  <script src="index.js"></script>
+  <script>
+    displayFavorites();
+  </script>
+</body>
+</html>
+
