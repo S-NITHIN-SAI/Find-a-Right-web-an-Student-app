@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career - Find a Right Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="netflix-bg">
+  <!-- Navbar -->
+  <header class="main-header">
+    <div class="navbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="courses.html" class="nav-btn">Courses</a>
+        <a href="career.html" class="nav-btn active">Career</a>
+        <a href="about.html" class="nav-btn">About</a>
+        <a href="profile.html" class="nav-btn">Profile</a>
+      </nav>
+      <div class="app-logo-index">Find a Right Web</div>
+      <button id="logoutBtn" class="logout-btn" aria-label="Logout">Logout</button>
+    </div>
+  </header>
+  
+  <!-- Career Grid with Search -->
+  <main class="container my-4">
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search companies..." aria-label="Search companies" autocomplete="off">
+    </div>
+    <div id="careerGrid" class="grid"></div>
+    <div id="emptyState" class="empty-state">No companies found.</div>
+  </main>
+  
+  <script src="index.js"></script>
+  <script>
+    // On page load, if on career.html, render the career cards.
+    const currentPage = window.location.pathname.split("/").pop();
+    if (currentPage === "career.html") {
+      displayCareerCards(careers);
+    }
+  </script>
+</body>
+</html>

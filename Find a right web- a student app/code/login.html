@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find a Right Web - Student App | Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="netflix-bg">
+  <header class="login-header">
+    <h1 class="app-logo" aria-label="Find a Right Web">Find a Right Web</h1>
+  </header>
+  
+  <div class="login-container">
+    <div class="login-card">
+      <h2>Sign In to Find a Right Web</h2>
+      <p>Choose one method below</p>
+      
+      <!-- Phone Number Login -->
+      <div class="form-group" id="phone-group">
+        <input type="tel" id="phoneInput" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+        <button id="sendOtpBtn" class="btn">Send OTP</button>
+      </div>
+      <div class="form-group hidden" id="otp-group">
+        <input type="text" id="otpInput" class="form-control" placeholder="Enter OTP" aria-label="Enter OTP">
+        <button id="verifyOtpBtn" class="btn">Verify OTP</button>
+      </div>
+      
+      <div class="divider">OR</div>
+      
+      <!-- Google Sign In -->
+      <div class="form-group">
+        <button id="googleSignInBtn" class="google-btn" aria-label="Sign in with Google">
+          <img src="https://via.placeholder.com/20?text=G" alt="Google Logo" class="google-logo" loading="lazy">
+          Sign in with Google
+        </button>
+      </div>
+      
+      <div id="loginMessage" class="message" role="alert"></div>
+    </div>
+  </div>
+  
+  <script src="login.js"></script>
+</body>
+</html>
+
